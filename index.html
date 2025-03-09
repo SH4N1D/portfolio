@@ -1,133 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shanid - Data Scientist Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanid | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-  <!-- Header Section -->
-  <header>
-    <div class="container">
-      <div class="theme-toggle">
-        <i class="fas fa-moon"></i>
-      </div>
-      <img src="https://via.placeholder.com/150" alt="Shanid" class="profile-img">
-      <h1>Shanid</h1>
-      <p>Aspiring Data Scientist | MCA Student</p>
-    </div>
-  </header>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        Hi, I'm Shanid, a passionate MCA student with a strong interest in data science and machine learning. 
-        I enjoy working with data to uncover insights and build predictive models. I'm skilled in Python, Excel, Keras, Django, Scikit-learn, and Tableau. 
-        I'm currently looking for opportunities to apply my knowledge in real-world projects.
-      </p>
-    </div>
-  </section>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <img src="https://via.placeholder.com/120" alt="Profile Picture" class="profile-pic">
+            <h1>Shanid</h1>
+            <p class="tagline">Aspiring Data Scientist | MCA Student</p>
+            <button id="theme-toggle"><i class="fas fa-moon"></i> Toggle Theme</button>
+        </div>
+    </header>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill">
-          <span>Python</span>
-          <div class="progress-bar" data-progress="90"></div>
+    <!-- About Section -->
+    <section id="about" class="fade-in">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am an aspiring data scientist with expertise in Python, Excel, Keras, Django, Scikit-learn, and Tableau.</p>
         </div>
-        <div class="skill">
-          <span>Excel</span>
-          <div class="progress-bar" data-progress="85"></div>
-        </div>
-        <div class="skill">
-          <span>Keras</span>
-          <div class="progress-bar" data-progress="80"></div>
-        </div>
-        <div class="skill">
-          <span>Django</span>
-          <div class="progress-bar" data-progress="75"></div>
-        </div>
-        <div class="skill">
-          <span>Scikit-learn</span>
-          <div class="progress-bar" data-progress="85"></div>
-        </div>
-        <div class="skill">
-          <span>Tableau</span>
-          <div class="progress-bar" data-progress="80"></div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-carousel">
-        <div class="project">
-          <img src="https://via.placeholder.com/300x200" alt="Project 1">
-          <h3>Customer Segmentation</h3>
-          <p>Used K-Means clustering to segment customers based on purchasing behavior.</p>
-          <a href="#" target="_blank">View Project</a>
+    <!-- Skills Section -->
+    <section id="skills" class="fade-in">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <span>Python</span>
+                    <div class="progress-bar"><div style="width: 90%;"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Excel</span>
+                    <div class="progress-bar"><div style="width: 80%;"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Keras</span>
+                    <div class="progress-bar"><div style="width: 70%;"></div></div>
+                </div>
+            </div>
         </div>
-        <div class="project">
-          <img src="https://via.placeholder.com/300x200" alt="Project 2">
-          <h3>Movie Recommendation System</h3>
-          <p>Built a content-based recommendation system using cosine similarity.</p>
-          <a href="#" target="_blank">View Project</a>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="fade-in">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="carousel">
+                <button id="prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300" alt="Project 1">
+                        <h3>Customer Segmentation</h3>
+                        <p>Used K-Means clustering to segment customers based on purchasing behavior.</p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300" alt="Project 2">
+                        <h3>Movie Recommendation System</h3>
+                        <p>Built a content-based recommendation system using cosine similarity.</p>
+                        <a href="#">View Project</a>
+                    </div>
+                </div>
+                <button id="next"><i class="fas fa-chevron-right"></i></button>
+            </div>
         </div>
-        <div class="project">
-          <img src="https://via.placeholder.com/300x200" alt="Project 3">
-          <h3>Exploratory Data Analysis</h3>
-          <p>Performed EDA on the Titanic dataset to uncover insights.</p>
-          <a href="#" target="_blank">View Project</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+            <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a></p>
+            <p><a href="https://via.placeholder.com/150" download>Download Resume</a></p>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Education Section -->
-  <section id="education">
-    <div class="container">
-      <h2>Education</h2>
-      <div class="education-item">
-        <h3>Master of Computer Applications (MCA)</h3>
-        <p>[Your University Name] | Expected Graduation: [Month, Year]</p>
-      </div>
-      <div class="education-item">
-        <h3>Bachelor of Computer Applications (BCA)</h3>
-        <p>[Your University Name] | Graduated: [Month, Year]</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>If you'd like to connect or discuss opportunities, feel free to reach out!</p>
-      <ul>
-        <li><a href="mailto:youremail@example.com">Email</a></li>
-        <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
-        <li><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></li>
-        <li><a href="assets/resume.pdf" target="_blank">Download Resume</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Shanid. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
