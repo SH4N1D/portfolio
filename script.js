@@ -1,4 +1,4 @@
-// JavaScript for Portfolio Functionality
+// JavaScript for Dynamic Features
 
 // Dark Mode Toggle
 const themeToggle = document.querySelector('.theme-toggle');
@@ -6,22 +6,24 @@ const body = document.body;
 
 themeToggle.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
-  const icon = body.classList.contains('dark-mode') ? 'sun' : 'moon';
-  themeToggle.innerHTML = <i class="fas fa-${icon} text-white"></i>;
-  localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+  const isDarkMode = body.classList.contains('dark-mode');
+  themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+  localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
 });
 
-// Initialize Theme
-if (localStorage.getItem('theme') === 'dark') {
+// Set Initial Theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
   body.classList.add('dark-mode');
-  themeToggle.innerHTML = '<i class="fas fa-sun text-white"></i>';
+  themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
 }
 
 // Project Details Modal
-const projectModal = new bootstrap.Modal(document.getElementById('projectModal'));
-const modalTitle = document.getElementById('modalTitle');
-const modalDescription = document.getElementById('modalDescription');
-const modalTechnologies = document.getElementById('modalTechnologies');
+const modal = document.getElementById('project-modal');
+const closeModal = document.querySelector('.close-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalDescription = document.getElementById('modal-description');
+const modalTechnologies = document.getElementById('modal-technologies');
 
 const projects = [
   {
@@ -41,13 +43,22 @@ const projects = [
   }
 ];
 
-// Add Event Listeners to Project Buttons
 document.querySelectorAll('.view-project-btn').forEach((button, index) => {
   button.addEventListener('click', () => {
     const project = projects[index];
     modalTitle.textContent = project.title;
     modalDescription.textContent = project.description;
-    modalTechnologies.innerHTML = project.technologies.map(tech => <li>${tech}</li>).join('');
-    projectModal.show();
+    modalTechnologies.innerHTML = project.technologies.map(tech => `<li>${tech}</li>`).join('');
+    modal.style.display = 'flex';
   });
+});
+
+closeModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
 });
