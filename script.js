@@ -2,35 +2,33 @@ document.addEventListener("DOMContentLoaded", function() {
     const toggleBtn = document.getElementById("theme-toggle");
     const body = document.body;
 
-    // Theme Toggle with Local Storage
+    // Apply saved theme from local storage
     if (localStorage.getItem("theme") === "dark") {
         body.classList.add("dark-mode");
+        toggleBtn.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+    } else {
+        toggleBtn.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
     }
+
+    // Toggle Theme
     toggleBtn.addEventListener("click", () => {
         body.classList.toggle("dark-mode");
-        localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+            toggleBtn.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+        } else {
+            localStorage.setItem("theme", "light");
+            toggleBtn.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+        }
     });
 
-    // Fade-in Animation on Scroll
-    const fadeElements = document.querySelectorAll(".fade-in");
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
+    // Add hover effect to project cards
+    document.querySelectorAll(".card").forEach(card => {
+        card.addEventListener("mouseenter", () => {
+            card.style.transform = "scale(1.05)";
         });
-    });
-    fadeElements.forEach(el => observer.observe(el));
-
-    // Carousel Functionality
-    let index = 0;
-    const track = document.querySelector(".carousel-track");
-    document.getElementById("prev").addEventListener("click", () => {
-        index = Math.max(index - 1, 0);
-        track.style.transform = `translateX(-${index * 320}px)`;
-    });
-    document.getElementById("next").addEventListener("click", () => {
-        index = Math.min(index + 1, track.children.length - 1);
-        track.style.transform = `translateX(-${index * 320}px)`;
+        card.addEventListener("mouseleave", () => {
+            card.style.transform = "scale(1)";
+        });
     });
 });
