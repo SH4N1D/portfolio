@@ -6,6 +6,12 @@ body {
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
 }
 
 .container {
@@ -22,6 +28,7 @@ header {
   min-height: 70px;
   border-bottom: #77aaff 3px solid;
   text-align: center;
+  position: relative;
 }
 
 header h1 {
@@ -38,6 +45,25 @@ header p {
   width: 150px;
   height: 150px;
   margin-bottom: 15px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Sections */
@@ -50,6 +76,22 @@ section h2 {
   margin-bottom: 20px;
   font-size: 28px;
   color: #333;
+  animation: slideIn 1s ease-in-out;
+}
+
+body.dark-mode section h2 {
+  color: #ffffff;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Skills Section */
@@ -64,6 +106,16 @@ section h2 {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+body.dark-mode .skill {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+.skill:hover {
+  transform: translateY(-10px);
 }
 
 .progress-bar {
@@ -71,6 +123,8 @@ section h2 {
   height: 10px;
   border-radius: 5px;
   margin-top: 10px;
+  width: 0;
+  transition: width 2s ease;
 }
 
 /* Projects Section */
@@ -102,6 +156,16 @@ section h2 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   min-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+body.dark-mode .project {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+.project:hover {
+  transform: translateY(-10px);
 }
 
 .project img {
@@ -117,6 +181,7 @@ section h2 {
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
 .project a:hover {
