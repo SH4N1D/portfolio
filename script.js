@@ -1,41 +1,26 @@
-// JavaScript for Project Carousel
-const carousel = document.querySelector('.projects-carousel');
-let isDragging = false, startX, startScrollLeft;
+// JavaScript for Dynamic Features
 
-// Mouse events for dragging
-carousel.addEventListener('mousedown', (e) => {
-  isDragging = true;
-  startX = e.pageX;
-  startScrollLeft = carousel.scrollLeft;
+// Dark/Light Mode Toggle
+const themeToggle = document.querySelector('.theme-toggle');
+const body = document.body;
+
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  const isDarkMode = body.classList.contains('dark-mode');
+  themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+  localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
 });
 
-carousel.addEventListener('mousemove', (e) => {
-  if (!isDragging) return;
-  e.preventDefault();
-  carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-});
+// Set Initial Theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  body.classList.add('dark-mode');
+  themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+}
 
-carousel.addEventListener('mouseup', () => {
-  isDragging = false;
-});
-
-carousel.addEventListener('mouseleave', () => {
-  isDragging = false;
-});
-
-// Touch events for mobile devices
-carousel.addEventListener('touchstart', (e) => {
-  isDragging = true;
-  startX = e.touches[0].pageX;
-  startScrollLeft = carousel.scrollLeft;
-});
-
-carousel.addEventListener('touchmove', (e) => {
-  if (!isDragging) return;
-  e.preventDefault();
-  carousel.scrollLeft = startScrollLeft - (e.touches[0].pageX - startX);
-});
-
-carousel.addEventListener('touchend', () => {
-  isDragging = false;
+// Animate Progress Bars
+const progressBars = document.querySelectorAll('.progress-bar');
+progressBars.forEach(bar => {
+  const progress = bar.getAttribute('data-progress');
+  bar.style.width = ${progress}%;
 });
