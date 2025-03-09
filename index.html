@@ -1,89 +1,89 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shanid | Portfolio</title>
+    <title>Shanid - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/YOUR-FONT-AWESOME-KIT.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
-        <div class="container">
-            <img src="https://via.placeholder.com/120" alt="Profile Picture" class="profile-pic">
-            <h1>Shanid</h1>
-            <p class="tagline">Aspiring Data Scientist | MCA Student</p>
-            <button id="theme-toggle"><i class="fas fa-moon"></i> Toggle Theme</button>
-        </div>
+        <img src="https://via.placeholder.com/120" alt="Profile Picture" class="profile-pic">
+        <h1>Shanid</h1>
+        <p>Aspiring Data Scientist | MCA Student</p>
+        <button id="theme-toggle"><i class="fas fa-moon"></i> Dark Mode</button>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="fade-in">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I am an aspiring data scientist with expertise in Python, Excel, Keras, Django, Scikit-learn, and Tableau.</p>
+    <!-- About Me -->
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>Hello! I am an aspiring Data Scientist with experience in Python, Machine Learning, and Data Analysis.</p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="container">
+        <h2>Skills</h2>
+        <div class="cards">
+            <div class="card"><i class="fab fa-python"></i><p>Python</p></div>
+            <div class="card"><i class="fas fa-table"></i><p>Excel</p></div>
+            <div class="card"><i class="fas fa-brain"></i><p>Keras</p></div>
+            <div class="card"><i class="fas fa-server"></i><p>Django</p></div>
+            <div class="card"><i class="fas fa-chart-line"></i><p>Scikit-learn</p></div>
+            <div class="card"><i class="fas fa-chart-pie"></i><p>Tableau</p></div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="fade-in">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill">
-                    <span>Python</span>
-                    <div class="progress-bar"><div style="width: 90%;"></div></div>
-                </div>
-                <div class="skill">
-                    <span>Excel</span>
-                    <div class="progress-bar"><div style="width: 80%;"></div></div>
-                </div>
-                <div class="skill">
-                    <span>Keras</span>
-                    <div class="progress-bar"><div style="width: 70%;"></div></div>
-                </div>
+    <!-- Projects -->
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://via.placeholder.com/280x150" alt="Customer Segmentation">
+                <h3>Customer Segmentation</h3>
+                <p>Used K-Means clustering to segment customers based on purchasing behavior.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/280x150" alt="Movie Recommendation">
+                <h3>Movie Recommendation System</h3>
+                <p>Built a content-based recommendation system using cosine similarity.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/280x150" alt="EDA">
+                <h3>Exploratory Data Analysis</h3>
+                <p>Performed EDA on the Titanic dataset to uncover insights.</p>
+                <a href="#">View Project</a>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="fade-in">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="carousel">
-                <button id="prev"><i class="fas fa-chevron-left"></i></button>
-                <div class="carousel-track">
-                    <div class="carousel-item">
-                        <img src="https://via.placeholder.com/300" alt="Project 1">
-                        <h3>Customer Segmentation</h3>
-                        <p>Used K-Means clustering to segment customers based on purchasing behavior.</p>
-                        <a href="#">View Project</a>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://via.placeholder.com/300" alt="Project 2">
-                        <h3>Movie Recommendation System</h3>
-                        <p>Built a content-based recommendation system using cosine similarity.</p>
-                        <a href="#">View Project</a>
-                    </div>
-                </div>
-                <button id="next"><i class="fas fa-chevron-right"></i></button>
+    <!-- Education -->
+    <section id="education" class="container">
+        <h2>Education</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>MCA</h3>
+                <p>[Your University Name] | Expected Graduation: [Month, Year]</p>
+            </div>
+            <div class="card">
+                <h3>BCA</h3>
+                <p>[Your University Name] | Graduated: [Month, Year]</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="fade-in">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-            <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a></p>
-            <p><a href="https://via.placeholder.com/150" download>Download Resume</a></p>
-        </div>
+    <!-- Contact -->
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i> Email</a></p>
+        <p>GitHub: <a href="https://github.com/yourusername"><i class="fab fa-github"></i> GitHub</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/yourusername"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+        <p><a href="assets/resume.pdf" download><i class="fas fa-file"></i> Download Resume</a></p>
     </section>
 
+    <script src="script.js"></script>
 </body>
 </html>
