@@ -8,25 +8,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav>
-    <div class="container">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="theme-toggle">
-        <i class="fas fa-moon"></i>
-      </div>
-    </div>
-  </nav>
-
   <!-- Header Section -->
   <header>
     <div class="container">
+      <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+      </div>
       <img src="https://via.placeholder.com/150" alt="Shanid" class="profile-img">
       <h1>Shanid</h1>
       <p>Aspiring Data Scientist | MCA Student</p>
@@ -96,34 +83,23 @@
           <img src="https://via.placeholder.com/300x200" alt="Project 1">
           <h3>Customer Segmentation</h3>
           <p>Used K-Means clustering to segment customers based on purchasing behavior.</p>
-          <button class="view-project-btn" data-project="1">View Project</button>
+          <a href="#" target="_blank">View Project</a>
         </div>
         <div class="project-card">
           <img src="https://via.placeholder.com/300x200" alt="Project 2">
           <h3>Movie Recommendation System</h3>
           <p>Built a content-based recommendation system using cosine similarity.</p>
-          <button class="view-project-btn" data-project="2">View Project</button>
+          <a href="#" target="_blank">View Project</a>
         </div>
         <div class="project-card">
           <img src="https://via.placeholder.com/300x200" alt="Project 3">
           <h3>Exploratory Data Analysis</h3>
           <p>Performed EDA on the Titanic dataset to uncover insights.</p>
-          <button class="view-project-btn" data-project="3">View Project</button>
+          <a href="#" target="_blank">View Project</a>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Project Details Modal -->
-  <div id="project-modal" class="modal">
-    <div class="modal-content">
-      <span class="close-modal">&times;</span>
-      <h2 id="modal-title"></h2>
-      <p id="modal-description"></p>
-      <h3>Technologies Used</h3>
-      <ul id="modal-technologies"></ul>
-    </div>
-  </div>
 
   <!-- Education Section -->
   <section id="education">
