@@ -1,34 +1,19 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const toggleBtn = document.getElementById("theme-toggle");
-    const body = document.body;
+// JavaScript for Dynamic Features
 
-    // Apply saved theme from local storage
-    if (localStorage.getItem("theme") === "dark") {
-        body.classList.add("dark-mode");
-        toggleBtn.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
-    } else {
-        toggleBtn.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
-    }
+// Dark/Light Mode Toggle
+const themeToggle = document.querySelector('.theme-toggle');
+const body = document.body;
 
-    // Toggle Theme
-    toggleBtn.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("theme", "dark");
-            toggleBtn.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
-        } else {
-            localStorage.setItem("theme", "light");
-            toggleBtn.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
-        }
-    });
-
-    // Add hover effect to project cards
-    document.querySelectorAll(".card").forEach(card => {
-        card.addEventListener("mouseenter", () => {
-            card.style.transform = "scale(1.05)";
-        });
-        card.addEventListener("mouseleave", () => {
-            card.style.transform = "scale(1)";
-        });
-    });
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  const isDarkMode = body.classList.contains('dark-mode');
+  themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+  localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
 });
+
+// Set Initial Theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  body.classList.add('dark-mode');
+  themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+}
