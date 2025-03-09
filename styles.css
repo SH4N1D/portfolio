@@ -21,17 +21,23 @@ header {
   padding-top: 30px;
   min-height: 70px;
   border-bottom: #77aaff 3px solid;
+  text-align: center;
 }
 
 header h1 {
-  text-align: center;
   margin: 0;
   font-size: 36px;
 }
 
 header p {
-  text-align: center;
   font-size: 18px;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 15px;
 }
 
 /* Sections */
@@ -46,105 +52,28 @@ section h2 {
   color: #333;
 }
 
-section p, section ul {
-  font-size: 18px;
-  line-height: 1.8;
-}
-
 /* Skills Section */
-#skills .skills-grid {
+.skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-}
-
-#skills .skill {
-  background: #77aaff;
-  color: #fff;
-  padding: 15px;
-  text-align: center;
-  border-radius: 5px;
-  transition: transform 0.3s ease;
-}
-
-#skills .skill:hover {
-  transform: scale(1.1);
-}
-
-/* Projects Section */
-#projects .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 
-.project {
+.skill {
   background: #fff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
 }
 
-.project:hover {
-  transform: translateY(-10px);
-}
-
-.project h3 {
-  margin-top: 0;
-}
-
-.project a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.project a:hover {
+.progress-bar {
   background: #77aaff;
-}
-
-/* Education Section */
-.education-item {
-  background: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
+  height: 10px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
 }
 
-/* Contact Section */
-#contact ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-#contact ul li {
-  margin-bottom: 10px;
-}
-
-#contact ul li a {
-  color: #77aaff;
-  text-decoration: none;
-}
-
-#contact ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 20px;
-}
-/* Projects Carousel */
+/* Projects Section */
 .projects-carousel {
   display: flex;
   overflow-x: auto;
@@ -164,4 +93,41 @@ footer {
 
 .projects-carousel::-webkit-scrollbar-track {
   background: #f4f4f4;
+}
+
+.project {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 300px;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.project a:hover {
+  background: #77aaff;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
 }
