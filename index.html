@@ -1,90 +1,144 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shanid - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Use Font Awesome Free CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shanid - Data Scientist Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+      </div>
+      <img src="https://via.placeholder.com/150" alt="Shanid" class="profile-img">
+      <h1>Shanid</h1>
+      <p>Aspiring Data Scientist | MCA Student</p>
+    </div>
+  </header>
 
-    <!-- Header -->
-    <header>
-        <img src="https://via.placeholder.com/120" alt="Profile Picture" class="profile-pic">
-        <h1>Shanid</h1>
-        <p>Aspiring Data Scientist | MCA Student</p>
-        <button id="theme-toggle"><i class="fas fa-moon"></i> Dark Mode</button>
-    </header>
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <hr class="section-hr">
+      <p>
+        Hi, I'm Shanid, a passionate MCA student with a strong interest in data science and machine learning. 
+        I enjoy working with data to uncover insights and build predictive models. I'm skilled in Python, Excel, Keras, Django, Scikit-learn, and Tableau. 
+        I'm currently looking for opportunities to apply my knowledge in real-world projects.
+      </p>
+    </div>
+  </section>
 
-    <!-- About Me -->
-    <section id="about" class="container">
-        <h2>About Me</h2>
-        <p>Hello! I am an aspiring Data Scientist with experience in Python, Machine Learning, and Data Analysis.</p>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="container">
-        <h2>Skills</h2>
-        <div class="cards">
-            <div class="card"><i class="fab fa-python"></i><p>Python</p></div>
-            <div class="card"><i class="fas fa-table"></i><p>Excel</p></div>
-            <div class="card"><i class="fas fa-brain"></i><p>Keras</p></div>
-            <div class="card"><i class="fas fa-server"></i><p>Django</p></div>
-            <div class="card"><i class="fas fa-chart-line"></i><p>Scikit-learn</p></div>
-            <div class="card"><i class="fas fa-chart-pie"></i><p>Tableau</p></div>
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <hr class="section-hr">
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fas fa-code skill-icon"></i>
+          <h3>Python</h3>
+          <p>Proficient in Python for data analysis, machine learning, and web development.</p>
         </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="container">
-        <h2>Projects</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="https://via.placeholder.com/280x150" alt="Customer Segmentation">
-                <h3>Customer Segmentation</h3>
-                <p>Used K-Means clustering to segment customers based on purchasing behavior.</p>
-                <a href="#">View Project</a>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/280x150" alt="Movie Recommendation">
-                <h3>Movie Recommendation System</h3>
-                <p>Built a content-based recommendation system using cosine similarity.</p>
-                <a href="#">View Project</a>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/280x150" alt="EDA">
-                <h3>Exploratory Data Analysis</h3>
-                <p>Performed EDA on the Titanic dataset to uncover insights.</p>
-                <a href="#">View Project</a>
-            </div>
+        <div class="skill-card">
+          <i class="fas fa-table skill-icon"></i>
+          <h3>Excel</h3>
+          <p>Experienced in data manipulation and visualization using Excel.</p>
         </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education" class="container">
-        <h2>Education</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>MCA</h3>
-                <p>[Your University Name] | Expected Graduation: [Month, Year]</p>
-            </div>
-            <div class="card">
-                <h3>BCA</h3>
-                <p>[Your University Name] | Graduated: [Month, Year]</p>
-            </div>
+        <div class="skill-card">
+          <i class="fas fa-brain skill-icon"></i>
+          <h3>Keras</h3>
+          <p>Skilled in building deep learning models using Keras.</p>
         </div>
-    </section>
+        <div class="skill-card">
+          <i class="fas fa-server skill-icon"></i>
+          <h3>Django</h3>
+          <p>Experienced in building web applications with Django.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-chart-line skill-icon"></i>
+          <h3>Scikit-learn</h3>
+          <p>Proficient in machine learning using Scikit-learn.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-chart-pie skill-icon"></i>
+          <h3>Tableau</h3>
+          <p>Skilled in creating interactive dashboards with Tableau.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact" class="container">
-        <h2>Contact</h2>
-        <p><a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i> Email</a></p>
-        <p><a href="https://github.com/yourusername"><i class="fab fa-github"></i> GitHub</a></p>
-        <p><a href="https://linkedin.com/in/yourusername"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
-        <p><a href="assets/resume.pdf" download><i class="fas fa-file"></i> Download Resume</a></p>
-    </section>
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <hr class="section-hr">
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x200" alt="Project 1">
+          <h3>Customer Segmentation</h3>
+          <p>Used K-Means clustering to segment customers based on purchasing behavior.</p>
+          <a href="#" target="_blank">View Project</a>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x200" alt="Project 2">
+          <h3>Movie Recommendation System</h3>
+          <p>Built a content-based recommendation system using cosine similarity.</p>
+          <a href="#" target="_blank">View Project</a>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x200" alt="Project 3">
+          <h3>Exploratory Data Analysis</h3>
+          <p>Performed EDA on the Titanic dataset to uncover insights.</p>
+          <a href="#" target="_blank">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- Education Section -->
+  <section id="education">
+    <div class="container">
+      <h2>Education</h2>
+      <hr class="section-hr">
+      <div class="education-item">
+        <h3>Master of Computer Applications (MCA)</h3>
+        <p>[Your University Name] | Expected Graduation: [Month, Year]</p>
+      </div>
+      <div class="education-item">
+        <h3>Bachelor of Computer Applications (BCA)</h3>
+        <p>[Your University Name] | Graduated: [Month, Year]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <hr class="section-hr">
+      <p>If you'd like to connect or discuss opportunities, feel free to reach out!</p>
+      <ul>
+        <li><a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i> Email</a></li>
+        <li><a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+        <li><a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        <li><a href="assets/resume.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Download Resume</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Shanid. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
