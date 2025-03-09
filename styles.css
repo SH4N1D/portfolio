@@ -144,3 +144,24 @@ footer {
   padding: 20px 0;
   margin-top: 20px;
 }
+/* Projects Carousel */
+.projects-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+}
+
+.projects-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-carousel::-webkit-scrollbar-thumb {
+  background: #77aaff;
+  border-radius: 4px;
+}
+
+.projects-carousel::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
