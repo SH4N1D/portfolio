@@ -4,141 +4,249 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shanid - Data Scientist Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <!-- Header Section -->
-  <header>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <div class="theme-toggle">
-        <i class="fas fa-moon"></i>
+      <a class="navbar-brand" href="#">Shanid</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <div class="theme-toggle ms-3">
+          <i class="fas fa-moon text-white"></i>
+        </div>
       </div>
-      <img src="https://via.placeholder.com/150" alt="Shanid" class="profile-img">
-      <h1>Shanid</h1>
-      <p>Aspiring Data Scientist | MCA Student</p>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="bg-dark text-white text-center py-5 mt-5">
+    <div class="container">
+      <img src="https://via.placeholder.com/150" alt="Shanid" class="rounded-circle mb-3 profile-img">
+      <h1 class="display-4">Shanid</h1>
+      <p class="lead">Aspiring Data Scientist | MCA Student</p>
     </div>
   </header>
 
   <!-- About Section -->
-  <section id="about">
+  <section id="about" class="py-5">
     <div class="container">
-      <h2>About Me</h2>
+      <h2 class="text-center mb-4">About Me</h2>
       <hr class="section-hr">
-      <p>
+      <p class="lead text-center">
         Hi, I'm Shanid, a passionate MCA student with a strong interest in data science and machine learning. 
-        I enjoy working with data to uncover insights and build predictive models. I'm skilled in Python, Excel, Keras, Django, Scikit-learn, and Tableau. 
-        I'm currently looking for opportunities to apply my knowledge in real-world projects.
+        I enjoy working with data to uncover insights and build predictive models.
       </p>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills">
+  <section id="skills" class="py-5 bg-light">
     <div class="container">
-      <h2>Skills</h2>
+      <h2 class="text-center mb-4">Skills</h2>
       <hr class="section-hr">
-      <div class="skills-grid">
-        <div class="skill-card">
-          <i class="fas fa-code skill-icon"></i>
-          <h3>Python</h3>
-          <p>Proficient in Python for data analysis, machine learning, and web development.</p>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-code fa-3x text-primary mb-3"></i>
+              <h3 class="card-title">Python</h3>
+              <p class="card-text">Proficient in Python for data analysis and machine learning.</p>
+            </div>
+          </div>
         </div>
-        <div class="skill-card">
-          <i class="fas fa-table skill-icon"></i>
-          <h3>Excel</h3>
-          <p>Experienced in data manipulation and visualization using Excel.</p>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-table fa-3x text-primary mb-3"></i>
+              <h3 class="card-title">Excel</h3>
+              <p class="card-text">Experienced in data manipulation and visualization using Excel.</p>
+            </div>
+          </div>
         </div>
-        <div class="skill-card">
-          <i class="fas fa-brain skill-icon"></i>
-          <h3>Keras</h3>
-          <p>Skilled in building deep learning models using Keras.</p>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-brain fa-3x text-primary mb-3"></i>
+              <h3 class="card-title">Keras</h3>
+              <p class="card-text">Skilled in building deep learning models using Keras.</p>
+            </div>
+          </div>
         </div>
-        <div class="skill-card">
-          <i class="fas fa-server skill-icon"></i>
-          <h3>Django</h3>
-          <p>Experienced in building web applications with Django.</p>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-server fa-3x text-primary mb-3"></i>
+              <h3 class="card-title">Django</h3>
+              <p class="card-text">Experienced in building web applications with Django.</p>
+            </div>
+          </div>
         </div>
-        <div class="skill-card">
-          <i class="fas fa-chart-line skill-icon"></i>
-          <h3>Scikit-learn</h3>
-          <p>Proficient in machine learning using Scikit-learn.</p>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+              <h3 class="card-title">Scikit-learn</h3>
+              <p class="card-text">Proficient in machine learning using Scikit-learn.</p>
+            </div>
+          </div>
         </div>
-        <div class="skill-card">
-          <i class="fas fa-chart-pie skill-icon"></i>
-          <h3>Tableau</h3>
-          <p>Skilled in creating interactive dashboards with Tableau.</p>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-chart-pie fa-3x text-primary mb-3"></i>
+              <h3 class="card-title">Tableau</h3>
+              <p class="card-text">Skilled in creating interactive dashboards with Tableau.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects">
+  <section id="projects" class="py-5">
     <div class="container">
-      <h2>Projects</h2>
+      <h2 class="text-center mb-4">Projects</h2>
       <hr class="section-hr">
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="https://via.placeholder.com/300x200" alt="Project 1">
-          <h3>Customer Segmentation</h3>
-          <p>Used K-Means clustering to segment customers based on purchasing behavior.</p>
-          <a href="#" target="_blank">View Project</a>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Project 1">
+            <div class="card-body">
+              <h3 class="card-title">Customer Segmentation</h3>
+              <p class="card-text">Used K-Means clustering to segment customers based on purchasing behavior.</p>
+              <button class="btn btn-primary view-project-btn" data-project="0">View Project</button>
+            </div>
+          </div>
         </div>
-        <div class="project-card">
-          <img src="https://via.placeholder.com/300x200" alt="Project 2">
-          <h3>Movie Recommendation System</h3>
-          <p>Built a content-based recommendation system using cosine similarity.</p>
-          <a href="#" target="_blank">View Project</a>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Project 2">
+            <div class="card-body">
+              <h3 class="card-title">Movie Recommendation System</h3>
+              <p class="card-text">Built a content-based recommendation system using cosine similarity.</p>
+              <button class="btn btn-primary view-project-btn" data-project="1">View Project</button>
+            </div>
+          </div>
         </div>
-        <div class="project-card">
-          <img src="https://via.placeholder.com/300x200" alt="Project 3">
-          <h3>Exploratory Data Analysis</h3>
-          <p>Performed EDA on the Titanic dataset to uncover insights.</p>
-          <a href="#" target="_blank">View Project</a>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h3 class="card-title">Exploratory Data Analysis</h3>
+              <p class="card-text">Performed EDA on the Titanic dataset to uncover insights.</p>
+              <button class="btn btn-primary view-project-btn" data-project="2">View Project</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Education Section -->
-  <section id="education">
-    <div class="container">
-      <h2>Education</h2>
-      <hr class="section-hr">
-      <div class="education-item">
-        <h3>Master of Computer Applications (MCA)</h3>
-        <p>[Your University Name] | Expected Graduation: [Month, Year]</p>
+  <!-- Project Details Modal -->
+  <div class="modal fade" id="projectModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Project Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h3 id="modalTitle"></h3>
+          <p id="modalDescription"></p>
+          <h4>Technologies Used</h4>
+          <ul id="modalTechnologies"></ul>
+        </div>
       </div>
-      <div class="education-item">
-        <h3>Bachelor of Computer Applications (BCA)</h3>
-        <p>[Your University Name] | Graduated: [Month, Year]</p>
+    </div>
+  </div>
+
+  <!-- Education Section -->
+  <section id="education" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Education</h2>
+      <hr class="section-hr">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title">Master of Computer Applications (MCA)</h3>
+              <p class="card-text">[Your University Name] | Expected Graduation: [Month, Year]</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title">Bachelor of Computer Applications (BCA)</h3>
+              <p class="card-text">[Your University Name] | Graduated: [Month, Year]</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
+  <section id="contact" class="py-5">
     <div class="container">
-      <h2>Contact Me</h2>
+      <h2 class="text-center mb-4">Contact Me</h2>
       <hr class="section-hr">
-      <p>If you'd like to connect or discuss opportunities, feel free to reach out!</p>
-      <ul>
-        <li><a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i> Email</a></li>
-        <li><a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-        <li><a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-        <li><a href="assets/resume.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Download Resume</a></li>
-      </ul>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <ul class="list-unstyled">
+            <li class="mb-3">
+              <a href="mailto:youremail@example.com" class="text-decoration-none">
+                <i class="fas fa-envelope fa-lg me-2"></i>youremail@example.com
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="https://github.com/yourusername" class="text-decoration-none">
+                <i class="fab fa-github fa-lg me-2"></i>GitHub Profile
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="https://linkedin.com/in/yourusername" class="text-decoration-none">
+                <i class="fab fa-linkedin fa-lg me-2"></i>LinkedIn Profile
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="assets/resume.pdf" class="text-decoration-none">
+                <i class="fas fa-file-pdf fa-lg me-2"></i>Download Resume
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
+  <footer class="bg-dark text-white text-center py-4">
     <div class="container">
-      <p>&copy; 2025 Shanid. All rights reserved.</p>
+      <p class="mb-0">&copy; 2025 Shanid. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
   <script src="script.js"></script>
 </body>
 </html>
